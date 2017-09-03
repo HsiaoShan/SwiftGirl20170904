@@ -175,6 +175,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
         
         let myView = mapView.dequeueReusableAnnotationView(withIdentifier: myAnnotation.viewId) ?? MKAnnotationView(annotation: myAnnotation, reuseIdentifier: myAnnotation.viewId)
+        
         myView.image = myAnnotation.img
         myView.canShowCallout = true
         myView.annotation = myAnnotation
@@ -187,8 +188,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         detail.addConstraint(NSLayoutConstraint(item: detail, attribute: .height, relatedBy: .lessThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 200))
         detail.font = detail.font.withSize(10)
         myView.detailCalloutAccessoryView = detail
-        myView.leftCalloutAccessoryView = UIImageView(image: #imageLiteral(resourceName: "blueplaceholder"))
-        myView.rightCalloutAccessoryView = UIImageView(image: #imageLiteral(resourceName: "redplaceholder"))
+        myView.leftCalloutAccessoryView = UIImageView(image: myAnnotation.img)
+        myView.rightCalloutAccessoryView = UIImageView(image: myAnnotation.img)
         
         return myView
     }
