@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jeT-LA-t6m">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="O6m-Mq-uV8">
+            <objects>
+                <viewController id="jeT-LA-t6m" customClass="ViewController" customModule="SwiftGirl20170904" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="arj-c0-AaV"/>
+                        <viewControllerLayoutGuide type="bottom" id="ddG-Da-Jfy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XHt-K6-72t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="duZ-uY-8ep">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入地址" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="a2M-xb-CBB">
+                                <rect key="frame" x="26" y="28" width="281.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8G6-jb-Bud">
+                                <rect key="frame" x="317.5" y="28" width="31" height="30"/>
+                                <state key="normal" title="搜尋"/>
+                                <connections>
+                                    <action selector="search:" destination="jeT-LA-t6m" eventType="touchUpInside" id="6IQ-3V-ZhS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFE-Z8-qlo">
+                                <rect key="frame" x="310" y="603" width="31" height="30"/>
+                                <state key="normal" title="定位"/>
+                                <connections>
+                                    <action selector="getUserLocation:" destination="jeT-LA-t6m" eventType="touchUpInside" id="fnq-4P-Js6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcq-wn-96C">
+                                <rect key="frame" x="317.5" y="71" width="31" height="30"/>
+                                <state key="normal" title="路線"/>
+                                <connections>
+                                    <action selector="route:" destination="jeT-LA-t6m" eventType="touchUpInside" id="fD7-MP-LRb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5y-zq-bx8">
+                                <rect key="frame" x="34" y="603" width="89" height="30"/>
+                                <state key="normal" title="內建地圖App"/>
+                                <connections>
+                                    <action selector="openMapApp:" destination="jeT-LA-t6m" eventType="touchUpInside" id="jsH-lO-mJt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="duZ-uY-8ep" firstAttribute="leading" secondItem="XHt-K6-72t" secondAttribute="leading" id="3Ag-9d-eV5"/>
+                            <constraint firstItem="duZ-uY-8ep" firstAttribute="bottom" secondItem="ddG-Da-Jfy" secondAttribute="top" id="JTZ-m6-ccr"/>
+                            <constraint firstItem="ddG-Da-Jfy" firstAttribute="top" secondItem="E5y-zq-bx8" secondAttribute="bottom" constant="34" id="NPN-Uw-umc"/>
+                            <constraint firstItem="E5y-zq-bx8" firstAttribute="leading" secondItem="XHt-K6-72t" secondAttribute="leadingMargin" constant="18" id="QeY-Mo-LfC"/>
+                            <constraint firstItem="a2M-xb-CBB" firstAttribute="leading" secondItem="XHt-K6-72t" secondAttribute="leadingMargin" constant="10" id="Sfv-n0-vYu"/>
+                            <constraint firstItem="8G6-jb-Bud" firstAttribute="centerY" secondItem="a2M-xb-CBB" secondAttribute="centerY" id="WYG-IB-vsv"/>
+                            <constraint firstItem="a2M-xb-CBB" firstAttribute="width" secondItem="duZ-uY-8ep" secondAttribute="width" multiplier="0.75" id="Zm4-Uv-kCf"/>
+                            <constraint firstItem="8G6-jb-Bud" firstAttribute="leading" secondItem="a2M-xb-CBB" secondAttribute="trailing" constant="10" id="bD3-hF-dZR"/>
+                            <constraint firstItem="duZ-uY-8ep" firstAttribute="width" secondItem="XHt-K6-72t" secondAttribute="width" id="iDg-iG-2rc"/>
+                            <constraint firstItem="ddG-Da-Jfy" firstAttribute="top" secondItem="lFE-Z8-qlo" secondAttribute="bottom" constant="34" id="uVd-4c-L99"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lFE-Z8-qlo" secondAttribute="trailing" constant="18" id="vNj-ji-4cn"/>
+                            <constraint firstItem="gcq-wn-96C" firstAttribute="top" secondItem="8G6-jb-Bud" secondAttribute="bottom" constant="13" id="vVO-He-825"/>
+                            <constraint firstItem="gcq-wn-96C" firstAttribute="centerX" secondItem="8G6-jb-Bud" secondAttribute="centerX" id="vj4-gQ-27Q"/>
+                            <constraint firstItem="duZ-uY-8ep" firstAttribute="height" secondItem="XHt-K6-72t" secondAttribute="height" id="wJE-uw-NQB"/>
+                            <constraint firstItem="a2M-xb-CBB" firstAttribute="top" secondItem="arj-c0-AaV" secondAttribute="bottom" constant="8" id="yAW-by-bgx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="duZ-uY-8ep" id="z3g-7x-dMH"/>
+                        <outlet property="text" destination="a2M-xb-CBB" id="PXD-5z-Mcq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2dR-yK-G4b" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70" y="134"/>
+        </scene>
+    </scenes>
+</document>
