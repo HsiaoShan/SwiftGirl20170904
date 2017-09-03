@@ -294,7 +294,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             }
             response.routes.forEach {
                 print("route:\($0.name),\($0.distance),\($0.polyline),\($0.transportType)")
-                self.mapView.add($0.polyline, level: .aboveRoads)
+                self.mapView.add($0.polyline)
             }
             self.centerMap(coordinate: source.coordinate)
         }
